@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@import "tailwindcss";
+
+body {
+  font-family: "Nunito", sans-serif !important;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.Toastify__toast--success {
+  background-color: #16a34a !important;
+  color: #fff !important;
+}
+
+.Toastify__toast--error {
+  background-color: #dc2626 !important;
+  color: #fff !important;
+}
+
+.Toastify__toast--info {
+  background-color: #2563eb !important;
+  color: #fff !important;
+}
+
+.Toastify__toast--warn {
+  background-color: #f59e0b !important;
+  color: #fff !important;
+}
+
+.Toastify__toast-body {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Nunito", sans-serif !important;
+}
