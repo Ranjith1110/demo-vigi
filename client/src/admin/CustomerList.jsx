@@ -241,7 +241,7 @@ const CustomerList = () => {
             {showModal && selectedCustomer && (
                 <div className="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
                     <div className="bg-white rounded-xl shadow-2xl w-full max-w-4xl max-h-[85vh] overflow-hidden flex flex-col">
-                        <div className="bg-[#03214a] text-white p-4 flex justify-between items-center shadow-lg z-10">
+                        <div className="bg-[#d90428] text-white p-4 flex justify-between items-center shadow-lg z-10">
                             <div>
                                 <h3 className="text-lg font-bold flex items-center gap-2"><Activity size={18}/> Clinical History</h3>
                                 <p className="text-xs text-blue-200 mt-1">Patient: {selectedCustomer.customerName} | Age: {selectedCustomer.age || "N/A"} | {selectedCustomer.mobileNumber}</p> {/* Added Age to Modal Header */}
@@ -258,12 +258,12 @@ const CustomerList = () => {
                                         const isLatest = idx === 0;
                                         return (
                                             <div key={idx} className={`relative pl-14 transition-all ${isLatest ? 'scale-100' : 'scale-95 opacity-80 hover:opacity-100 hover:scale-100'}`}>
-                                                <div className={`absolute left-4 top-5 w-4 h-4 rounded-full z-10 border-2 border-white ${isLatest ? 'bg-blue-600 shadow-blue-300 shadow-lg scale-125' : 'bg-gray-400'}`}></div>
+                                                <div className={`absolute left-4 top-5 w-4 h-4 rounded-full z-10 border-2 border-white ${isLatest ? 'bg-[#d90428] shadow-[#d90428] shadow-lg scale-125' : 'bg-gray-400'}`}></div>
 
-                                                <div className={`bg-white border rounded-xl shadow-sm overflow-hidden ${isLatest ? 'border-blue-400 ring-2 ring-blue-100' : 'border-gray-200'}`}>
+                                                <div className={`bg-white border rounded-xl shadow-sm overflow-hidden ${isLatest ? 'border- ring-2 ring-blue-100' : 'border-gray-200'}`}>
                                                     <div className={`px-4 py-3 border-b flex justify-between items-center ${isLatest ? 'bg-blue-50' : 'bg-gray-50'}`}>
                                                         <div className="flex items-center gap-3">
-                                                            {isLatest && <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Latest Visit</span>}
+                                                            {isLatest && <span className="bg-[#d90428] text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Latest Visit</span>}
                                                             {!isLatest && <span className="bg-gray-200 text-gray-600 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">History</span>}
                                                             <div className="flex items-center gap-2 text-sm font-semibold text-gray-800">
                                                                 <Clock size={14} className="text-gray-500" />

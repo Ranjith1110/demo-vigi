@@ -254,10 +254,10 @@ const Items = () => {
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
                     <h2 className="text-2xl font-bold">Items Listing</h2>
                     <div className="flex flex-wrap gap-3">
-                        <button onClick={handleDownloadSample} className="px-4 py-2 bg-[#5ce1e6] text-[#03214a] rounded-full text-sm font-bold hover:bg-[#03214a] hover:text-white transition shadow-md flex items-center gap-2">
+                        <button onClick={handleDownloadSample} className="px-4 py-2 bg-[#d90428] text-white rounded-full text-sm font-bold hover:bg-[#90041b] hover:text-white transition shadow-md flex items-center gap-2">
                             <DownloadCloud size={18} /> Sample
                         </button>
-                        <label className="px-4 py-2 bg-[#5ce1e6] text-[#03214a] rounded-full text-sm font-bold hover:bg-[#03214a] hover:text-white transition shadow-md flex items-center gap-2 cursor-pointer">
+                        <label className="px-4 py-2 bg-[#d90428] text-white rounded-full text-sm font-bold hover:bg-[#90041b] hover:text-white transition shadow-md flex items-center gap-2 cursor-pointer">
                             <UploadCloud size={18} /> Bulk Upload
                             <input type="file" className="hidden" accept=".xlsx, .xls, .csv" onChange={handleBulkUpload} />
                         </label>
@@ -267,7 +267,7 @@ const Items = () => {
                         <button onClick={handlePrint} className="px-4 py-2 bg-gray-800 text-white rounded-full text-sm font-bold hover:bg-black transition shadow-md flex items-center gap-2">
                             <Printer size={18} /> Print Barcodes ({itemsToPrint.length})
                         </button>
-                        <button onClick={handleDeleteAll} className="px-4 py-2 bg-red-600 text-white rounded-full text-sm font-bold hover:bg-red-700 transition shadow-md flex items-center gap-2">
+                        <button onClick={handleDeleteAll} className="px-4 py-2 bg-[#d90428] text-white rounded-full text-sm font-bold hover:bg-[#90041b] hover:text-white transition shadow-md flex items-center gap-2">
                             <AlertTriangle size={18} /> Delete All Data
                         </button>
                     </div>

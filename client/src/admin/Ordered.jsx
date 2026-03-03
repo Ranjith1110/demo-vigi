@@ -522,10 +522,10 @@ const Ordered = () => {
                         </div>
                     </div>
                     <div className="flex gap-2">
-                        <button onClick={handleExportExcel} className="flex items-center gap-2 px-6 py-2 bg-[#5ce1e6] text-[#03214a] font-bold rounded-full hover:bg-[#03214a] hover:text-white transition shadow-md disabled:opacity-50">
+                        <button onClick={handleExportExcel} className="flex items-center gap-2 px-6 py-2 bg-[#d90428] text-white font-bold rounded-full hover:bg-[#90041b] hover:text-white transition shadow-md disabled:opacity-50">
                             <FileSpreadsheet size={16} /> Excel
                         </button>
-                        <button onClick={handleExportPDF} disabled={isExporting} className="flex items-center gap-2 px-6 py-2 bg-[#5ce1e6] text-[#03214a] font-bold rounded-full hover:bg-[#03214a] hover:text-white transition shadow-md disabled:opacity-50">
+                        <button onClick={handleExportPDF} disabled={isExporting} className="flex items-center gap-2 px-6 py-2 bg-[#d90428] text-white font-bold rounded-full hover:bg-[#90041b] hover:text-white transition shadow-md disabled:opacity-50">
                             <Download size={16} /> {isExporting ? "Generating..." : "PDF"}
                         </button>
                     </div>

@@ -54,19 +54,13 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             )}
 
             <aside
-                className={`fixed top-0 left-0 z-50 h-screen bg-[#0f0f0f] border-r border-white/5 flex flex-col justify-between w-64 transition-all duration-500 ease-in-out
+                className={`fixed top-0 left-0 z-50 h-screen bg-[#fff] border-r border-white/5 flex flex-col justify-between w-64 transition-all duration-500 ease-in-out
                 ${isOpen ? "translate-x-0 shadow-[20px_0_50px_rgba(0,0,0,0.5)]" : "-translate-x-full lg:translate-x-0"}`}
             >
                 <div>
                     {/* Header / Logo Section */}
                     <div className="p-6 flex items-center justify-between border-b border-white/5 bg-gradient-to-b from-white/5 to-transparent">
-                        <Link to="/" className="flex items-center gap-2 group bg-white p-1 rounded-md">
-                            {/* <div className="w-8 h-8 rounded bg-[#d90428] flex items-center justify-center shadow-lg shadow-[#d90428]/20 group-hover:scale-110 transition-transform">
-                                <Shield size={18} className="text-white" />
-                            </div>
-                            <span className="text-lg font-bold text-white tracking-tighter italic uppercase">
-                                VIGILIX<span className="text-[#d90428]">HUB</span>
-                            </span> */}
+                        <Link to="/" className="flex items-center gap-2 group">
                             <img src="/logo.png" alt="" />
                         </Link>
                         <button
@@ -88,7 +82,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                                 className={({ isActive }) =>
                                     `flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 group ${isActive
                                         ? "bg-[#d90428] text-white shadow-lg shadow-[#d90428]/20"
-                                        : "text-gray-400 hover:bg-white/5 hover:text-white"
+                                        : "text-black hover:bg-white/5 hover:text-black/80"
                                     }`
                                 }
                             >

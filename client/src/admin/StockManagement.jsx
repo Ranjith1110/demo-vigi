@@ -175,7 +175,7 @@ const StockManagement = () => {
         <Layout>
             <div className="space-y-6">
                 {/* Header */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-white p-6 rounded-xl shadow-sm border-l-8 border-[#5ce1e6]">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-white p-6 rounded-xl shadow-sm border-l-8 border-[#d90428]">
                     <div>
                         <h2 className="text-2xl font-bold text-gray-800">Stock Management</h2>
                         <p className="text-sm text-gray-500">
@@ -203,7 +203,7 @@ const StockManagement = () => {
                         { label: `${selectedType !== "All" ? selectedType : 'Total'} Stock`, value: stats.totalStock, color: "text-gray-400" },
                         { label: "Whole Retail Value", value: `₹${stats.wholeRetailValue.toLocaleString()}`, color: "text-purple-500" },
                         { label: "Stock Sold", value: stats.stockSold, color: "text-indigo-500" },
-                        { label: "Sold Stock Value", value: `₹${stats.soldStockValue.toLocaleString()}`, color: "text-orange-500" },
+                        { label: "Stock Retail Value", value: `₹${stats.soldStockValue.toLocaleString()}`, color: "text-orange-500" },
                         { label: "Stock Sold Price", value: `₹${stats.stockSoldPrice.toLocaleString()}`, color: "text-emerald-500" },
                         { label: "Remaining Stock", value: stats.remainingStock, color: "text-blue-500" },
                         { label: "Remaining Stock Value", value: `₹${stats.remainingStockValue.toLocaleString()}`, color: "text-blue-600", bg: "bg-blue-50/30 border-[#5ce1e6] border-2" }
@@ -244,7 +244,7 @@ const StockManagement = () => {
 
                     <div className="overflow-x-auto">
                         <table className="w-full text-[10px] text-left text-gray-700">
-                            <thead className="bg-[#03214a] text-white uppercase tracking-tighter">
+                            <thead className="bg-[#d90428] text-white uppercase tracking-tighter">
                                 <tr>
                                     <th className="px-4 py-4 font-bold border-r border-white/10">Item Description</th>
                                     <th className="px-2 py-4 text-center">Stock (Total)</th>
@@ -296,7 +296,7 @@ const StockManagement = () => {
                     <div className="p-4 bg-gray-50 border-t flex justify-center">
                         <button
                             onClick={() => setShowAll(!showAll)}
-                            className="bg-[#5ce1e6] text-[#03214a] px-8 py-2.5 rounded-full text-xs font-black uppercase hover:bg-[#03214a] hover:text-white transition-all shadow-md flex items-center gap-2"
+                            className="bg-[#d90428] text-white px-8 py-2.5 rounded-full text-xs font-black uppercase hover:bg-[#90041b] hover:text-white transition-all shadow-md flex items-center gap-2"
                         >
                             {showAll ? <>Collapse <ChevronUp size={16} /></> : <>Show All ({filteredItems.length - 8} more) <ChevronDown size={18} /></>}
                         </button>

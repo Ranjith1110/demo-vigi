@@ -254,7 +254,7 @@ const PurchaseBill = () => {
           <div className="flex gap-4 items-center">
             <button
               onClick={() => navigate('/purchase-history')}
-              className="flex items-center gap-2 px-6 py-2 bg-[#5ce1e6] text-[#03214a] font-bold rounded-full hover:bg-[#03214a] hover:text-white transition shadow-md disabled:opacity-50"
+              className="flex items-center gap-2 px-6 py-2 bg-[#d90428] text-white font-bold rounded-full hover:bg-[#90041b] hover:text-white transition shadow-md disabled:opacity-50"
             >
               <History size={18} /> History
             </button>
@@ -386,7 +386,7 @@ const PurchaseBill = () => {
             <div className="md:col-span-1 flex justify-center">
               <button
                 onClick={handleAddItem}
-                className="bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 transition w-full flex justify-center"
+                className="bg-gray-800 text-white p-2 rounded-md hover:bg-black transition w-full flex justify-center"
                 title="Add to List"
               >
                 <Plus size={20} />
@@ -473,7 +473,7 @@ const PurchaseBill = () => {
           </button>
 
           <button
-            className="flex items-center gap-2 px-6 py-2 bg-[#5ce1e6] text-[#03214a] font-bold rounded-full hover:bg-[#03214a] hover:text-white transition shadow-md disabled:opacity-50"
+            className="flex items-center gap-2 px-6 py-2 bg-[#d90428] text-white font-bold rounded-full hover:bg-[#90041b] hover:text-white transition shadow-md disabled:opacity-50"
             onClick={handleSubmit}
             disabled={loading}
           >

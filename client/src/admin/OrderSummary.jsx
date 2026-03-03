@@ -619,7 +619,7 @@ const OrderSummary = () => {
                 <div className="p-6 space-y-6">
                     {/* CUSTOMER INFO SECTION */}
                     <div className="bg-gray-50 p-5 rounded-lg border border-gray-200">
-                        <h3 className="text-xl font-bold text-blue-800 uppercase tracking-wider mb-4">Customer Information</h3>
+                        <h3 className="text-xl font-bold text-black uppercase tracking-wider mb-4">Customer Information</h3>
                         <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
                             <div className="md:col-span-2">
                                 <label className="text-xs font-semibold text-gray-600">Mobile*</label>
@@ -656,15 +656,15 @@ const OrderSummary = () => {
                     </div>
 
                     {/* CLINICAL ENTRY SECTION */}
-                    <div className="bg-blue-50 p-5 rounded-lg border border-blue-200 relative">
+                    <div className="bg-red-50 p-5 rounded-lg border border-blue-200 relative">
                         {/* ... Clinical Entry Logic (Same as before) ... */}
                         <div className="flex justify-between items-center mb-4">
-                            <h3 className="text-xl font-bold text-blue-800 uppercase tracking-wider">Clinical Entry</h3>
+                            <h3 className="text-xl font-bold text-black uppercase tracking-wider">Clinical Entry</h3>
                             <div className="flex gap-4 items-center">
                                 <input type="date" className="border rounded px-2 py-1 text-xs" value={appointment.checkupDate} onChange={e => setAppointment({ ...appointment, checkupDate: e.target.value })} />
                                 <div className="flex bg-white rounded-lg shadow-sm p-1">
-                                    <button onClick={() => setPrescriptionMode("Glasses")} className={`flex items-center gap-2 px-4 py-1.5 rounded-md text-xs font-bold transition ${prescriptionMode === "Glasses" ? "bg-blue-600 text-white" : "text-gray-500 hover:bg-gray-100"}`}><Glasses size={14} /> Glasses</button>
-                                    <button onClick={() => setPrescriptionMode("ContactLens")} className={`flex items-center gap-2 px-4 py-1.5 rounded-md text-xs font-bold transition ${prescriptionMode === "ContactLens" ? "bg-blue-600 text-white" : "text-gray-500 hover:bg-gray-100"}`}><Eye size={14} /> Contact Lens</button>
+                                    <button onClick={() => setPrescriptionMode("Glasses")} className={`flex items-center gap-2 px-4 py-1.5 rounded-md text-xs font-bold transition ${prescriptionMode === "Glasses" ? "bg-[#d90428] text-white" : "text-gray-500 hover:bg-gray-100"}`}><Glasses size={14} /> Glasses</button>
+                                    <button onClick={() => setPrescriptionMode("ContactLens")} className={`flex items-center gap-2 px-4 py-1.5 rounded-md text-xs font-bold transition ${prescriptionMode === "ContactLens" ? "bg-[#d90428] text-white" : "text-gray-500 hover:bg-gray-100"}`}><Eye size={14} /> Contact Lens</button>
                                 </div>
                             </div>
                         </div>
@@ -673,7 +673,7 @@ const OrderSummary = () => {
                                 {prescriptionMode === "Glasses" ? (
                                     <>
                                         {['right', 'left'].map((eye) => (
-                                            <div key={eye} className={`bg-white p-3 rounded shadow-sm border-t-4 ${eye === 'right' ? 'border-blue-500' : 'border-blue-400'}`}>
+                                            <div key={eye} className={`bg-white p-3 rounded shadow-sm border-t-4 ${eye === 'right' ? 'border-red-500' : 'border-red-400'}`}>
                                                 <h4 className="text-xs font-bold text-gray-700 mb-2 uppercase">{eye} EYE</h4>
                                                 <div className="grid grid-cols-7 gap-1">
                                                     <div><label className="text-[10px] text-gray-400 block">SPH</label><SearchableSelect value={glassReadings[eye].SPH} options={SPH_CYL_Values} onChange={v => setGlassReadings(p => ({ ...p, [eye]: { ...p[eye], SPH: v } }))} /></div>
@@ -705,11 +705,11 @@ const OrderSummary = () => {
                                 )}
                             </div>
                         </div>
-                        <div className="flex justify-end border-t border-blue-200 pt-3 gap-2">
+                        <div className="flex justify-end border-t border-red-200 pt-3 gap-2">
                             <button onClick={handleShareWhatsApp} className="bg-green-500 text-white px-5 py-2 rounded-full text-sm font-bold shadow hover:bg-green-600 transition flex items-center gap-2">
                                 <MessageCircle size={16} /> Share via WhatsApp
                             </button>
-                            <button onClick={handleSaveClinical} className="px-6 py-2 bg-[#5ce1e6] text-[#03214a] rounded-full text-sm font-bold hover:bg-[#03214a] hover:text-white transition shadow-md flex items-center gap-2">
+                            <button onClick={handleSaveClinical} className="px-6 py-2 bg-[#d90428] text-white rounded-full text-sm font-bold hover:bg-[#90041b] hover:text-white transition shadow-md flex items-center gap-2">
                                 <Save size={16} /> Save Clinical Entry
                             </button>
                         </div>
@@ -912,7 +912,7 @@ const OrderSummary = () => {
                         <button onClick={() => setShowPreview(true)} disabled={cart.length === 0} className={`px-4 py-2 rounded-full text-sm font-medium transition flex items-center gap-2 ${cart.length === 0 ? 'bg-gray-200 text-gray-400' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}><Eye size={16} /> Preview</button>
                         <button onClick={handlePrint} disabled={cart.length === 0} className={`px-4 py-2 rounded-full text-sm font-medium transition flex items-center gap-2 ${cart.length === 0 ? 'bg-gray-200 text-gray-400' : 'bg-blue-100 text-blue-700 hover:bg-blue-200'}`}><Printer size={16} /> Print</button>
                         {cart.length > 0 && (
-                            <button onClick={handleSaveBill} className="px-6 py-2 bg-[#5ce1e6] text-[#03214a] rounded-full text-sm font-bold hover:bg-[#03214a] hover:text-white transition shadow-md flex items-center gap-2">
+                            <button onClick={handleSaveBill} className="px-6 py-2 bg-[#d90428] text-white rounded-full text-sm font-bold hover:bg-[#90041b] hover:text-white transition shadow-md flex items-center gap-2">
                                 <Save size={18} /> {editingId ? "Update Bill" : "Save Sale Bill"}
                             </button>
                         )}

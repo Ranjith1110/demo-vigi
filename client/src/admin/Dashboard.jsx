@@ -10,6 +10,7 @@ import {
   Filter as FilterIcon,
   X,
   AlertTriangle,
+  Calendar,
   Wallet,
   CreditCard,
   Smartphone,
@@ -330,7 +331,7 @@ const Dashboard = () => {
 
         <div className="flex flex-col xl:flex-row justify-between items-end xl:items-center mb-8 gap-4">
           <div>
-            <h1 className="text-3xl font-extrabold text-[#03214a]">Analytics Dashboard</h1>
+            <h1 className="text-3xl font-extrabold text-black">Analytics Dashboard</h1>
             <p className="text-gray-500 text-sm mt-1">
               {isTodayView ? "Showing stats for Today" : `Stats from ${dateRange.startDate} to ${dateRange.endDate}`}
             </p>
@@ -365,9 +366,9 @@ const Dashboard = () => {
 
               <button
                 onClick={toggleCustomFilter}
-                className={`px-4 py-1.5 rounded-full text-xs font-bold transition flex bg-red-600 text-white items-center gap-1 ${showCustomFilter ? 'bg-[#5ce1e6] text-[#03214a]' : 'text-gray-600 hover:bg-red-700'}`}
+                className={`px-4 py-1.5 rounded-full text-xs font-bold transition flex bg-[#d90428] text-white items-center gap-1 ${showCustomFilter ? 'bg-[#5ce1e6] text-[#03214a]' : 'text-gray-600 hover:bg-red-700'}`}
               >
-                {showCustomFilter ? <X size={14} /> : <AlertTriangle size={14} />} Caution
+                {showCustomFilter ? <X size={14} /> : <Calendar size={14} />} Custome
               </button>
             </div>
 

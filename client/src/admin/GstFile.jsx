@@ -413,7 +413,7 @@ const GstFile = () => {
                     <div className="flex gap-2">
                         <button
                             onClick={handleExportExcel}
-                            className="flex items-center gap-2 px-6 py-2 bg-[#5ce1e6] text-[#03214a] font-bold rounded-full hover:bg-[#03214a] hover:text-white transition shadow-md disabled:opacity-50">
+                            className="flex items-center gap-2 px-6 py-2 bg-[#d90428] text-white font-bold rounded-full hover:bg-[#90041b] hover:text-white transition shadow-md disabled:opacity-50">
                             <FileSpreadsheet size={16} /> Export Excel
                         </button>
                     </div>
