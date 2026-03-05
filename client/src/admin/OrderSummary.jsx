@@ -611,19 +611,19 @@ const OrderSummary = () => {
                         {editingId ? "Edit Order" : "Order Summary"}
                     </h2>
                     <div className="text-right">
-                        <div className="text-md font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Invoice No: {invoiceNo || "..."}</div>
+                        <div className="text-md font-bold text-red-600 bg-red-50 px-3 py-1 rounded-full">Invoice No: {invoiceNo || "..."}</div>
                         <div className="text-xs text-gray-400 mt-1">{date}</div>
                     </div>
                 </div>
 
                 <div className="p-6 space-y-6">
                     {/* CUSTOMER INFO SECTION */}
-                    <div className="bg-gray-50 p-5 rounded-lg border border-gray-200">
+                    <div className="bg-red-50 p-5 rounded-lg border border-red-200">
                         <h3 className="text-xl font-bold text-black uppercase tracking-wider mb-4">Customer Information</h3>
                         <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
                             <div className="md:col-span-2">
                                 <label className="text-xs font-semibold text-gray-600">Mobile*</label>
-                                <input className="w-full border rounded p-2 text-sm focus:ring-2 focus:ring-blue-400 outline-none" value={customer.mobileNumber} onChange={e => setCustomer({ ...customer, mobileNumber: e.target.value })} onBlur={handleMobileBlur} placeholder="Enter mobile to search..." />
+                                <input className="w-full border rounded p-2 text-sm outline-none" value={customer.mobileNumber} onChange={e => setCustomer({ ...customer, mobileNumber: e.target.value })} onBlur={handleMobileBlur} placeholder="Enter mobile to search..." />
                             </div>
                             <div className="md:col-span-2"><label className="text-xs font-semibold text-gray-600">Name*</label><input className="w-full border rounded p-2 text-sm" value={customer.customerName} onChange={e => setCustomer({ ...customer, customerName: e.target.value })} /></div>
                             <div>
@@ -656,7 +656,7 @@ const OrderSummary = () => {
                     </div>
 
                     {/* CLINICAL ENTRY SECTION */}
-                    <div className="bg-red-50 p-5 rounded-lg border border-blue-200 relative">
+                    <div className="bg-red-50 p-5 rounded-lg border border-red-200 relative">
                         {/* ... Clinical Entry Logic (Same as before) ... */}
                         <div className="flex justify-between items-center mb-4">
                             <h3 className="text-xl font-bold text-black uppercase tracking-wider">Clinical Entry</h3>
